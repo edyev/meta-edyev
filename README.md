@@ -1,20 +1,20 @@
 # meta-edyev
-meta-edyev  This is a repo of an example layer for Yocto (specifcally for imx8m)  This layer include
-This is a repo of an example layer for Yocto (specifcally for imx8m)
+
+This is a repo for an example layer meta-edyev for Yocto 
 
 This layer includes a new machine configuration (imx8mmedyev)
 
-This layer includes a new tool called devmem2
+This layer includes a recipe for devmem2 tool used for reading physical memory
 
-This layers also includes patches for both recipes for kernel and bsp (u-boot) and its appropriate .bbappends and patches
+This layers also includes patches for both kernel and bsp recipes (u-boot) and its appropriate .bbappends and patch files
 
-u-boot patch sets fdt_file environment variable which translates in setting the name for the device tree that will be used when loading kernel
+Initially u-boot patch set fdt_file environment variable which translates in setting the name for the device tree that will be used when loading kernel, however now another patch was added which does the same but using another method along with new machine configuration
 
 linux-imx patch adds the proper device tree
 
 You can use this a starting point for your own layer, machine and modify recipes.
 
-Please bear in mind that if you want to patch an existing recipe defined in another layer you only need to include a directory indicating the name of the recipe (i.e recipes-kernel, recipes-bsp) and follow the path convention for the specific recipe.
+Please bear in mind that if you want to patch an existing recipe defined in another layer you only need to include a directory indicating the name of the recipe (i.e recipes-kernel, recipes-bsp) and follow the path convention for the specific recipe and of course add there the corresponding .bbappend and patch files
 
 Example.
 
